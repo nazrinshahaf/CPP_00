@@ -6,12 +6,13 @@
 /*   By: nfernand <nfernand@student.42kl.edu.m      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/01 13:56:53 by nfernand          #+#    #+#             */
-/*   Updated: 2022/03/02 13:59:18 by nfernand         ###   ########.fr       */
+/*   Updated: 2022/03/14 10:52:20 by nfernand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Account.hpp"
 #include <iostream>
+#include <ctime>
 
 using std::cout;
 using std::endl;
@@ -116,8 +117,20 @@ void	Account::displayStatus(void) const
 
 void	Account::_displayTimestamp(void)
 {
-	cout << "[19920104_091532] ";
-	//change later
+	//cout << "[19920104_091532] ";
+	std::time_t t = std::time(0);   
+    std::tm* now = std::localtime(&t);
+	cout << '[' << (now->tm_year + 1900);
+	if (now->tm_mon < 10)
+		cout << '0' << now->tm_mon;
+	else
+		cout << now->tm_mon;
+	if (now->tm_mday < 10)
+		cout << '0' << now->tm_mday << '_';
+	else
+		cout << now->tm_mday << '_';
+	cout << now->tm_hour << now->tm_min << now->tm_sec;
+	cout << "] " ;
 	return ;
 }
 
