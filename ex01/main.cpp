@@ -6,12 +6,12 @@
 /*   By: nfernand <nfernand@student.42kl.edu.m      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/28 15:28:39 by nfernand          #+#    #+#             */
-/*   Updated: 2022/03/01 11:51:24 by nfernand         ###   ########.fr       */
+/*   Updated: 2022/06/07 14:19:20 by nfernand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Phonebook.class.hpp"
-#include "Contact.class.hpp"
+#include "Phonebook.hpp"
+#include "Contact.hpp"
 #include <iostream>
 
 using std::cout;
@@ -47,9 +47,12 @@ int	main(void)
 			cout << "=================================" << endl << endl;
 			p1.searchContact();
 		}
+		else if (input == "FILL")
+		{
+			p1.fillContact();
+		}
 		else if (input == "EXIT")
 		{
-			//do something
 			return (0);
 		}
 		else

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Phonebook.class.hpp                                :+:      :+:    :+:   */
+/*   Phonebook.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nfernand <nfernand@student.42kl.edu.m      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/28 15:22:27 by nfernand          #+#    #+#             */
-/*   Updated: 2022/02/28 19:26:47 by nfernand         ###   ########.fr       */
+/*   Updated: 2022/06/07 14:01:41 by nfernand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # define PHONEBOOK_CLASS_HPP
 
 #include <iostream>
-#include "Contact.class.hpp"
+#include "Contact.hpp"
 
 using std::string;
 
@@ -29,6 +29,7 @@ class	Phonebook
 		~Phonebook(void);
 
 		void	addContact(void);
+		void	fillContact(void);
 		void	searchContact(void);
 };
 
