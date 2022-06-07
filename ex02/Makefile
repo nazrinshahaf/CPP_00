@@ -11,6 +11,9 @@ MAIN = test.cpp
 $(NAME):
 	$(CC) $(CFLAGS) $(MAIN) $(SRC) -o $(NAME) 
 
+mymain:
+	$(CC) $(CFLAGS) main.cpp $(SRC) -o $(NAME) 
+
 all: $(NAME)
 
 clean:
